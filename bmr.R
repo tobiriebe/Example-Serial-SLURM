@@ -405,7 +405,7 @@ addAlgorithm(reg, id = "sampledboosting", fun = sampledboosting.wrapper, overwri
 
 
 # Define problem parameters:
-pars = list(simulations = c(500, 1000), predictors = c(100, 1000))
+pars = list(simulations = c(500), predictors = c(100, 1000))
 mytest.design = makeDesign("mytest", exhaustive = pars)
 
 # Define sampledboosting parameters:
@@ -421,7 +421,7 @@ sampledboosting.design = makeDesign("sampledboosting", exhaustive = pars)
 # Use  previously defined experimental designs.
 addExperiments(reg, prob.designs = mytest.design,
                algo.designs = sampledboosting.design,
-               repls = 2) # usually you would set repls to 100 or more.
+               repls = 1) # usually you would set repls to 100 or more.
 
 
 
