@@ -14,7 +14,7 @@ library(dplyr)
 loadConfig()
 getConfig()
 #name ID an file direction
-reg = makeExperimentRegistry(id = "mytest", packages = "mlr")
+reg = makeExperimentRegistry(id = "mytest", packages = c("mlr", "caret"))
  
 data <- function(simulations,
                 samples=200,
