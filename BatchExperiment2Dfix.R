@@ -145,7 +145,7 @@ sampledboosting.wrapper <- function(dynamic, sampleRatio ){
     nOuterFolds <- 10 #number of folds
     redSteps <- 100 #number of steps to run for the reduction in voxels
     sampleRatio = sampleRatio #ratio of voxels to REMOVE
-    fixedMstop <- 100
+    fixedMstop <- 500
     fixedNu <- 0.1
     dynamic <- dynamic
     localRun <- TRUE
@@ -424,7 +424,7 @@ addAlgorithm(reg, id = "sampledboosting", fun = sampledboosting.wrapper, overwri
 
 
 # Define problem parameters:
-pars = list(simulations = c(500), predictors = c(900))
+pars = list(simulations = c(2), predictors = c(900))
 mytest2Dfix.design = makeDesign("mytest2Dfix", exhaustive = pars)
 
 # Define sampledboosting parameters:
