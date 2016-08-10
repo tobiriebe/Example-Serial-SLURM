@@ -13,8 +13,8 @@ d = setdiff(names(resources), c("walltime", "memory"))
 if (length(d) > 0L)
   stopf("Illegal resources used: %s", collapse(d))
 
--walltime = asInt(resources$walltime, lower = 1L, upper = 172800L)
- -memory = asInt(resources$memory, lower = 100L, upper = 64000L)
+walltime = asInt(resources$walltime, lower = 1L, upper = 172800L)
+memory = asInt(resources$memory, lower = 100L, upper = 64000L)
 
 cmd = "R CMD BATCH --no-save --no-restore"
 
@@ -33,8 +33,8 @@ cmd = "R CMD BATCH --no-save --no-restore"
 
 ## resources
 ## SLURM wants minutes
-#SBATCH --time=120:00:00
-#SBATCH --mem=8192mb
+#SBATCH --time=<%= ceiling(walltime / 60L)%>
+#SBATCH --mem=<%= memory %>
 
 source /etc/profile
 
