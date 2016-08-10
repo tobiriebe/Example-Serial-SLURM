@@ -14,7 +14,8 @@ library(dplyr)
 loadConfig()
 getConfig()
 #name ID an file direction
-reg = makeExperimentRegistry(id = "mytest", packages = c("mlr", "BatchJobs", "BatchExperiments", "ROCR", "mboost", "caret", "pROC", "dplyr")))
+reg = makeExperimentRegistry(id = "mytest", packages = c("mlr", "BatchJobs", "BatchExperiments",
+         "ROCR", "mboost", "caret", "pROC", "dplyr"))
  
 data <- function(simulations,
                 samples=200,
