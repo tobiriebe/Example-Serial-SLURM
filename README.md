@@ -4,9 +4,8 @@ Example Code for Serial Batch Jobs using BatchJobs and BatchExperiments on LRZ L
 ## First step: 
 
 * Login to LRZ
-* Clone repo: `git clone https://github.com/philippstats/Example-Serial-SLURM.git`
-* In bmr.R adjust setwd in line 9.
-* In lrz_serial.tmpl update the email in line 32. 
+* Clone repo: `git clone https://github.com/tobiriebe/Example-Serial-SLURM.git`
+
 
 ## Second step
 
