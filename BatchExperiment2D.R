@@ -92,7 +92,7 @@ data <- function(simulations,
   }
   
   #save file containing continuous and binary responses, together with simulation parameters
-  save(simulations = simulations, samples = samples, predictors = predictors, SNRy = SNRy, kappa = kappa, coeffs = coeffs,
+  list(simulations = simulations, samples = samples, predictors = predictors, SNRy = SNRy, kappa = kappa, coeffs = coeffs,
        X = X, Xnoise = Xnoise, Y = Y, Ynoise = Ynoise, yBin = yBin, yBinNoise = yBinNoise)
 }
 
@@ -413,7 +413,7 @@ addAlgorithm(reg, id = "sampledboosting", fun = sampledboosting.wrapper, overwri
 
 
 # Define problem parameters:
-pars = list(simulations = 500, predictors = 900)
+pars = list(simulations = 2, predictors = 900)
 mytest2D.design = makeDesign("mytest2D", exhaustive = pars)
 
 # Define sampledboosting parameters:
