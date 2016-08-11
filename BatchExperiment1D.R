@@ -430,5 +430,5 @@ addExperiments(reg, prob.designs = mytest.design,
 summarizeExperiments(reg)
 
 # Submit the jobs to the batch system
-submitJobs(reg, resources = list(walltime = 60L*60L*4L, memory = 2200L), max.retries = 10L)
+submitJobs(reg, resources = list(walltime = 60L*60L*168L, memory = 240000L), max.retries = 10L)
  
